@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Todomvc</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{BASE_TAG}}
+
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/todomvc.css">
+  </head>
+  <body>
+    <script>
+      window.EmberENV = {{EMBER_ENV}};
+    </script>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/todomvc.js"></script>
+    <script>
+      window.Todomvc = require('todomvc/app')['default'].create({{APP_CONFIG}});
+    </script>
+  </body>
+</html>
