@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-export default Ember.ObjectController.extend({
+export default Ember.Controller.extend({
 	actions: {
 		editTodo: function() {
 			this.set('isEditing', true);
@@ -22,6 +22,10 @@ export default Ember.ObjectController.extend({
 	},
 
 	isEditing: false,
+
+	title: function() {
+		return this.get('model').get('title');
+	}.property('model.title'),
 
 	isCompleted: function(key, value){
     var model = this.get('model');
